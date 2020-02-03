@@ -32,6 +32,7 @@
     "type": "git",
     "url": "https://github.com/gregjopa/express-app-testing-demo"
   },
+  
   "jest": {
     "testEnvironment": "node",
     "verbose": true
