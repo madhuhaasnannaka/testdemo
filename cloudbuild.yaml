@@ -39,8 +39,8 @@ steps:
   args:
   - run
   - --image=gcr.io/$PROJECT_ID/nodej:latest
-  - --location=asia-east1-a
-  - --cluster=tf-gke-cluster
+  - --location=us-west1-a
+  - --cluster=standard-cluster-1
   - --app=nodej
   - --expose=8080
   - --namespace=default
