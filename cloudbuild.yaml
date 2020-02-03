@@ -32,8 +32,6 @@ steps:
   - --app=nodej
   - --expose=8080
   - --namespace=default
-options:
-    machineType: 'N1_HIGHCPU_8'
     
 - name: 'gcr.io/cloud-builders/npm'
   id: install sonar-scanner 
