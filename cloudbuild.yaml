@@ -20,9 +20,9 @@ steps:
   id: install typescript 
   args: ['install','-D','typescript@latest']
 
-#- name: 'gcr.io/cloud-builders/npm'
- # id: sonarpush
- # args: ['run','sonar']
+- name: 'gcr.io/cloud-builders/npm'
+  id: sonarpush
+  args: ['run','sonar']
   
 
 - name: 'gcr.io/cloud-builders/docker'
