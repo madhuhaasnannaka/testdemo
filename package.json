@@ -8,6 +8,7 @@
   "private": true,
   "main": "app/server.js",
   "scripts": {
+    "ng": "ng",
     "start": "npm app/server.js",
     "build": "ng build",
     "test": "npm run lint && npm run jest",
