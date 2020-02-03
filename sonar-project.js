@@ -15,7 +15,7 @@ const sonarqubeScanner = require('sonarqube-scanner');
        'sonar.tests': '.',
        'sonar.test.inclusions': '**/testing/**,**/*.spec.ts',
        'sonar.javascript.lcov.reportPaths': 'coverage/lcov.info',
-       'sonar.testExecutionReportPaths': 'test-report.xml'
+       'sonar.testExecutionReportPaths': 'coverage/clover.xml'
        
 
        }
