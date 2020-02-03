@@ -10,12 +10,12 @@ const sonarqubeScanner = require('sonarqube-scanner');
        'sonar.language': 'js',
        'sonar.sourceEncoding': 'UTF-8',
        //'sonar.sources': '.',
-       'sonar.inclusions' : 'src/**', // Entry point of your code
-       'sonar.exclusions': '**/*.test.*',
+       'sonar.inclusions' : '**', // Entry point of your code
+       'sonar.exclusions': '*.test.*',
        'sonar.tests': '.',
        'sonar.test.inclusions': '**/testing/**,**/*.spec.ts',
-       //'sonar.javascript.lcov.reportPaths': 'coverage/lcov.info',
-       //'sonar.testExecutionReportPaths': 'test-report.xml'
+       'sonar.javascript.lcov.reportPaths': 'coverage/lcov.info',
+       'sonar.testExecutionReportPaths': 'test-report.xml'
        
 
        }
