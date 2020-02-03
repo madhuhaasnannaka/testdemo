@@ -12,18 +12,6 @@ steps:
   id: unit_testing
   args: ['install','-g','karma-cli','run','test']
   
-- name: 'gcr.io/cloud-builders/npm'
-  id: install sonar-scanner 
-  args: ['install','sonarqube-scanner','--save-dev']
-  
-- name: 'gcr.io/cloud-builders/npm'
-  id: install typescript 
-  args: ['install','-D','typescript@latest']
-
-- name: 'gcr.io/cloud-builders/npm'
-  id: sonarpush
-  args: ['run','sonar']
-  
 
 - name: 'gcr.io/cloud-builders/docker'
   id: building_image_using_docker
@@ -46,3 +34,16 @@ steps:
   - --namespace=default
 options:
     machineType: 'N1_HIGHCPU_8'
+    
+- name: 'gcr.io/cloud-builders/npm'
+  id: install sonar-scanner 
+  args: ['install','sonarqube-scanner','--save-dev']
+  
+- name: 'gcr.io/cloud-builders/npm'
+  id: install typescript 
+  args: ['install','-D','typescript@latest']
+
+- name: 'gcr.io/cloud-builders/npm'
+  id: sonarpush
+  args: ['run','sonar']
+  
