@@ -2,16 +2,12 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   id: installing_npm
   args: ['install']
-- name: 'gcr.io/cloud-builders/ng'
-  id: installing_ng
-  args: ['install']
 
-
-- name: 'gcr.io/cloud-builders/ng'
-  id: building_with_ng
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  id: installing_npm
   args: ['build']
-
-
+  
 - name: 'gcr.io/cloud-builders/npm'
   id: unit_testing
   args: ['test']
