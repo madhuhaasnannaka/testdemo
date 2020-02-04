@@ -13,7 +13,7 @@ steps:
   
 - name: 'gcr.io/cloud-builders/npm'
   id: install sonar-scanner 
-  args: ['install','sonarqube-scanner','--save-dev']
+  args: ['install','sonarqube-scanner']
   
 - name: 'gcr.io/cloud-builders/npm'
   id: install typescript 
