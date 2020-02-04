@@ -2,11 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   id: installing_npm
   args: ['install']
-  
-- name: 'gcr.io/cloud-builders/npm'
-  id: starting npm
-  args: ['start']
-  
+
 - name: 'gcr.io/cloud-builders/npm'
   id: building_with_npm
   args: ['build']
