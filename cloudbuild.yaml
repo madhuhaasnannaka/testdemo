@@ -10,7 +10,7 @@ steps:
 
 - name: 'gcr.io/cloud-builders/npm'
   id: unit_testing
-  args: ['install','-g','karma-cli','run','test']
+  args: ['test']
   
 
 - name: 'gcr.io/cloud-builders/docker'
