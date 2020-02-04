@@ -5,7 +5,7 @@ steps:
   
 - name: 'gcr.io/cloud-builders/npm'
   id: building_with_npm
-  args: ['build']
+  args: ['run','build']
 
 
 - name: 'gcr.io/cloud-builders/npm'
@@ -22,7 +22,7 @@ steps:
 
 - name: 'gcr.io/cloud-builders/npm'
   id: sonarpush
-  args: ['sonar']
+  args: ['run','sonar']
   
 
 - name: 'gcr.io/cloud-builders/docker'
