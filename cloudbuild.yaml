@@ -27,18 +27,18 @@ steps:
 
 - name: 'gcr.io/cloud-builders/docker'
   id: building_image_using_docker
-  args: ["build", "-t", "gcr.io/$PROJECT_ID/nodej:$COMMIT_SHA", "-t", "gcr.io/$PROJECT_ID/nodej:latest", "."]
+  args: ["build", "-t", "gcr.io/$PROJECT_ID/demoapp:$COMMIT_SHA", "-t", "gcr.io/$PROJECT_ID/demoapp:latest", "."]
 - name: 'gcr.io/cloud-builders/docker'
   id: pushing_image_gcr
-  args: ["push", "gcr.io/$PROJECT_ID/nodej:$COMMIT_SHA"]
+  args: ["push", "gcr.io/$PROJECT_ID/demoapp:$COMMIT_SHA"]
 - name: 'gcr.io/cloud-builders/docker'
   id: pushing_container_image_gke
-  args: ["push", "gcr.io/$PROJECT_ID/nodej:latest"]
+  args: ["push", "gcr.io/$PROJECT_ID/demoapp:latest"]
 - name: 'gcr.io/cloud-builders/gke-deploy:stable'
   id: deploying_container_gke
   args:
   - run
-  - --image=gcr.io/$PROJECT_ID/nodej:latest
+  - --image=gcr.io/$PROJECT_ID/demoapp:latest
   - --location=us-central1-a
   - --cluster=standard-cluster-2	
   - --app=nodej
