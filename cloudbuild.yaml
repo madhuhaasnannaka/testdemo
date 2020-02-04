@@ -5,11 +5,11 @@ steps:
 
 - name: 'gcr.io/cloud-builders/npm'
   id: build
-  args: ['build']
+  args: ['run','build']
   
 - name: 'gcr.io/cloud-builders/npm'
   id: unit_testing
-  args: ['test']
+  args: ['run','test']
   
 - name: 'gcr.io/cloud-builders/npm'
   id: install sonar-scanner 
