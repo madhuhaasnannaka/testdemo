@@ -5,12 +5,24 @@ steps:
   
 - name: 'gcr.io/cloud-builders/npm'
   id: building_with_npm
-  args: ['run','build']
+  args: ['build']
 
 
 - name: 'gcr.io/cloud-builders/npm'
   id: unit_testing
   args: ['test']
+  
+- name: 'gcr.io/cloud-builders/npm'
+  id: install sonar-scanner 
+  args: ['install','sonarqube-scanner','--save-dev']
+  
+- name: 'gcr.io/cloud-builders/npm'
+  id: install typescript 
+  args: ['install','-D','typescript@latest']
+
+- name: 'gcr.io/cloud-builders/npm'
+  id: sonarpush
+  args: ['sonar']
   
 
 - name: 'gcr.io/cloud-builders/docker'
@@ -33,18 +45,7 @@ steps:
   - --expose=8080
   - --namespace=default
     
-- name: 'gcr.io/cloud-builders/npm'
-  id: install sonar-scanner 
-  args: ['install','sonarqube-scanner','--save-dev']
-  
-- name: 'gcr.io/cloud-builders/npm'
-  id: install typescript 
-  args: ['install','-D','typescript@latest']
 
-- name: 'gcr.io/cloud-builders/npm'
-  id: sonarpush
-  args: ['run','sonar']
-  
 options:
   machineType: 'N1_HIGHCPU_8'
   
