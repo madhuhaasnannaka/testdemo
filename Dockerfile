@@ -15,6 +15,7 @@ USER $USER
 WORKDIR $APP_HOME
 
 RUN npm install
+RUN npm build
 
 COPY . $APP_HOME/
 
