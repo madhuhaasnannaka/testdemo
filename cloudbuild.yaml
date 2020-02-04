@@ -5,7 +5,7 @@ steps:
   
 - name: 'gcr.io/cloud-builders/npm'
   id: building_with_npm
-  args: ['run','build']
+  args: ['run-script','build']
 
 
 - name: 'gcr.io/cloud-builders/npm'
