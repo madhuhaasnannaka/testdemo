@@ -14,7 +14,7 @@ RUN chown -R $USER:$USER $APP_HOME
 USER $USER
 WORKDIR $APP_HOME
 
-RUN ng install
+RUN npm install
 
 COPY . $APP_HOME/
 
