@@ -14,8 +14,8 @@ RUN chown -R $USER:$USER $APP_HOME
 USER $USER
 WORKDIR $APP_HOME
 
-RUN npm install
-RUN npm update
+RUN ng install
+
 COPY . $APP_HOME/
 
 EXPOSE $PORT
