@@ -15,8 +15,7 @@ USER $USER
 WORKDIR $APP_HOME
 
 RUN npm install
-RUN npm build
-
+RUN npm update
 COPY . $APP_HOME/
 
 EXPOSE $PORT
