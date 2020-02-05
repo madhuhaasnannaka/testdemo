@@ -2,7 +2,9 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   id: installing_npm
   args: ['install']
-
+- name: 'gcr.io/cloud-builders/npm'
+  id: updating_npm
+  args: ['run','update']
 - name: 'gcr.io/cloud-builders/npm'
   id: build
   args: ['run','build']
