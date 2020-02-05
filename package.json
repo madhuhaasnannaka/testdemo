@@ -9,7 +9,8 @@
   "main": "app/server.js",
   "scripts": {
     "start": "npm app/server.js",
-    "build": "npm build --verbose",
+    "update": "npm update",
+    "build": "npm build",
     "test": "npm run lint && npm run jest",
     "test:e2e": "jest --runInBand e2e_tests/*.test.js",
     "jest": "jest --coverage app/__tests__/*.test.js",
