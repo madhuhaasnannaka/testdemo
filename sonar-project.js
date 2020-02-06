@@ -11,7 +11,7 @@ const sonarqubeScanner = require('sonarqube-scanner');
        'sonar.sourceEncoding': 'UTF-8',
        //'sonar.sources': '.',
        'sonar.inclusions' : '**', // Entry point of your code
-       //'sonar.exclusions': '*.test.*',
+       'sonar.exclusions': '',
        'sonar.tests': '.',
        'sonar.test.inclusions': '**/testing/**,**/*.spec.ts',
        'sonar.javascript.lcov.reportPaths': 'coverage/lcov.info',
