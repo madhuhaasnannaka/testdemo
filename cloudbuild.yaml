@@ -40,7 +40,7 @@ steps:
   args:
   - run
   - --image=gcr.io/$PROJECT_ID/demoapp:latest
-  - --location=us-east4-c
+  - --location=us-central1-a
   - --cluster=standard-cluster-1	
   - --app=nodej
   - --expose=8080
