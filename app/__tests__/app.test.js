@@ -51,22 +51,5 @@ describe('index route', () => {
         expect(response.body).toEqual({ error: 'Internal server error' });
       });
   });
-  test('should respond with a 500 error due to bad jsonp data', () => {
-    return request(app)
-      .get('/?tags=error&tagmode=all')
-      .expect('Content-Type', /json/)
-      .expect(500)
-      .then(response => {
-        expect(response.body).toEqual({ error: 'Internal server error' });
-      });
-  });
-  test('should respond with a 200 with invalid query parameters', () => {
-    return request(app)
-      .get('/?tags=california123&tagmode=all')
-      .expect('Content-Type', /html/)
-      .expect(200)
-      .then(response => {
-        expect(response.text).toMatch(/<div class="alert alert-danger">/);
-      });
-  });
+
 });
