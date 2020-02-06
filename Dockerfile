@@ -4,7 +4,7 @@ ENV USER=angular
 ENV USER_HOME=/home/$USER
 ENV APP_HOME=$USER_HOME/app
 
-#ENV PORT=8080
+ENV PORT=8080
 
 RUN addgroup -S $USER && adduser -S -G $USER $USER
 
@@ -18,7 +18,7 @@ RUN npm install
 
 COPY . $APP_HOME/
 
-#EXPOSE $PORT
+EXPOSE $PORT
 
 ENTRYPOINT [ "npm", "start" ]
-#CMD [ "--", "--host", "0.0.0.0", "--port", "${PORT}" ]
+CMD [ "--", "--host", "0.0.0.0", "--port", "${PORT}" ]
