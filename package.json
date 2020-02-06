@@ -8,7 +8,7 @@
   "private": true,
   "main": "app/server.js",
   "scripts": {
-    "start": "npm app/server.js",
+    "start": "node app/server.js",
     "update": "npm update",
     "build": "npm build",
     "test": "npm run lint && npm run jest",
