@@ -25,7 +25,7 @@ steps:
   id: sonarpush
   args: ['run','sonar']
   
-
+#changes
 - name: 'gcr.io/cloud-builders/docker'
   id: building_image_using_docker
   args: ["build", "-t", "gcr.io/$PROJECT_ID/demoapp:$COMMIT_SHA", "-t", "gcr.io/$PROJECT_ID/demoapp:latest", "."]
