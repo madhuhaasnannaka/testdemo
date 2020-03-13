@@ -41,7 +41,7 @@ steps:
   - run
   - --image=gcr.io/$PROJECT_ID/demoapp:latest
   - --location=us-central1-a
-  - --cluster=standard-cluster-1	
+  - --cluster=cluster-2	
   - --app=nodej
   - --expose=8080
   - --namespace=default
