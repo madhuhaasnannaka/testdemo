@@ -1,9 +1,9 @@
 const sonarqubeScanner = require('sonarqube-scanner');
      sonarqubeScanner({
        serverUrl: 'https://sonarcloud.io/',
-       token : '2e91d913248a0898dc1d2041af190b29e1107872',
+       token : '5c720034b30f2f505e976bab6dacc5dd6171aa21',
        options : {
-       'sonar.login': '2e91d913248a0898dc1d2041af190b29e1107872',
+       'sonar.login': '5c720034b30f2f505e976bab6dacc5dd6171aa21',
        'sonar.organization': 'lttsdevops',
        'sonar.projectKey': 'lttsdevops_sample-nodejs-project',
        'sonar.projectVersion': '1.0',
